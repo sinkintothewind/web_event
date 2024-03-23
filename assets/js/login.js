@@ -16,7 +16,9 @@ $(function () {
         repwd: function (value) {
             var pwd = $('.reg-box [name=password]').val()
             if (pwd !== value) { return '两次密码不一致！' }
-        }
+        },
+        name: /^[a-z0-9_-]{3,16}$/,
+email:/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
     })
     // 登陆表单提交发起ajax请求
     $('#login-form').on('submit', function (e) {
